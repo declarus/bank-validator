@@ -1,3 +1,4 @@
+require 'active_model'
 module ActiveModel
   module Validations
     class IbanValidator < EachValidator

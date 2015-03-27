@@ -1,1 +1,1 @@
-require 'bank-validator/active_model/active_model'
+require_relative './active_model'
