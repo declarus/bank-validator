@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "bank-validator.gemspec",
     "lib/active_model.rb",
     "lib/active_model/validations/iban_validator.rb",
     "lib/bank-validator.rb",
