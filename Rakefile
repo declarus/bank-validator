@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bank-validator"
   gem.homepage = "http://github.com/declarus/bank-validator"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Bank account number validator gem}
+  gem.description = %Q{Validates IBAN and BIC account numbers. Still a work in progress}
   gem.email = "adam.bahlke@hitfoxgroup.com"
   gem.authors = ["Adam Bahlke"]
   # dependencies defined in Gemfile
