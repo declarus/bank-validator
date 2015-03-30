@@ -1,7 +1,8 @@
 PATH
   remote: ~/Workspace/bank-validator
   specs:
-    bank-validator (0.0.4)
+    bank-validator (0.0.5)
+      activemodel (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
 

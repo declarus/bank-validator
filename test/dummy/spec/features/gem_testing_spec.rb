@@ -19,4 +19,9 @@ RSpec.describe 'testing the gem', type: :feature do
     @user.iban = 'BE62510007547061'
     expect(@user.save).to be(true)
   end
+
+  it 'creates a user with full iban' do
+    user = User.create(name: 'Adam', iban: 'BE62510007547061')
+    expect(user.iban).to eq('BE62510007547061')
+  end
 end

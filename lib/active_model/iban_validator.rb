@@ -18,13 +18,12 @@ class IbanValidator < ActiveModel::EachValidator
 
   def valid_iban?(iban)
     # Move first four characters to end of string
-    first_four_chars = iban.slice!(0..3)
-    iban += first_four_chars
+    dummy_iban = iban.slice(4..-1) + iban.slice(0..3)
 
     # Substitute all letters with integers
-    iban.split(//).each { |char| iban.gsub!(char, (char.downcase.ord - 87).to_s) if (char =~ /[a-zA-Z]/).present? }
+    dummy_iban.split(//).each { |char| dummy_iban.gsub!(char, (char.downcase.ord - 87).to_s) if (char =~ /[a-zA-Z]/).present? }
 
     # Check if division by 97 yields a remainder of 1, in which case it could be a valid IBAN
-    (iban.to_i % 97) == 1
+    (dummy_iban.to_i % 97) == 1
   end
 end
