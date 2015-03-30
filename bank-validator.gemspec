@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bank-validator.gemspec",
-    "lib/active_model.rb",
     "lib/active_model/iban_validator.rb",
     "lib/bank-validator.rb",
     "test/helper.rb",

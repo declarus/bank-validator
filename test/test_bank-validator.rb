@@ -1,4 +1,3 @@
-require 'active_model'
 require 'helper'
 
 class TestBankValidator < MiniTest::Test

@@ -1,4 +1,3 @@
-require 'active_model'
 require 'simplecov'
 
 module SimpleCov::Configuration
