@@ -4,7 +4,7 @@ RSpec.describe 'testing the gem', type: :feature do
 
   context "validating iban" do
     before :each do
-      @user = User.create(name: 'Adam', iban: '', bic: 'DEUTDEFF500')
+      @user = User.create(name: 'Adam', iban: '', bic: 'DEUTDEFF500', routing_number: '226073523')
     end
 
     it 'validates a users iban' do
@@ -30,7 +30,7 @@ RSpec.describe 'testing the gem', type: :feature do
 
   context "validating bic" do
     before :each do
-      @user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: '')
+      @user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: '', routing_number: '226073523')
     end
 
     it 'validates a users bic' do
@@ -57,6 +57,28 @@ RSpec.describe 'testing the gem', type: :feature do
     it 'saves the bic' do
       user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: 'DEUTDEFF500')
       expect(user.bic).to eq('DEUTDEFF500')
+    end
+  end
+
+  context "validating routing number" do
+    before :each do
+      @user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: 'DEUTDEFF500', routing_number: '')
+    end
+
+    it 'validates a users routing number' do
+      @user.routing_number = '226073523'
+      expect(@user.save).to be(true)
+    end
+
+    it 'returns false for an invalid routing number' do
+      @user.routing_number = '22607352'
+      expect(@user.save).to be(false)
+
+      @user.routing_number = '2260735233'
+      expect(@user.save).to be(false)
+
+      @user.routing_number = '2260-7352-3'
+      expect(@user.save).to be(false)
     end
   end
 end
