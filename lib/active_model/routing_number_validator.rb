@@ -9,7 +9,7 @@ class RoutingNumberValidator < ActiveModel::EachValidator
   private
   
   def record_error(record, attribute, value)
-    record.errors.add(attribute, :invalid_iban)
+    record.errors.add(attribute, (:invalid_routing_number || options[:message]))
   end
   
   def regexp

@@ -28,7 +28,9 @@ validates :bic, bic: true
 validates :routing_number, routing_number: true
 ```
 
-Now you're ready to go! 
+You can also pass custom messages to your validations. Otherwise the symbols `:invalid_iban`, `:invalid_bic`, `:invalid_routing_number` are returned, which you can map to internationalized error messages.
+
+Now you're ready to go!
 
 ## Contributing to bank-validator
  
