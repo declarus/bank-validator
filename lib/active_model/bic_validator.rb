@@ -3,7 +3,7 @@ require 'active_model'
 class BicValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
-    record_error(record, attribute, value) unless value =~ regexp
+    record_error(record, attribute, value) unless value =~ BicValidator.regexp
   end
   
   private
@@ -12,7 +12,7 @@ class BicValidator < ActiveModel::EachValidator
     record.errors.add(attribute, (options[:message] || :invalid_bic))
   end
 
-  def regexp
+  def self.regexp
     /[A-Z]{6}[A-Z0-9]{2,}/
   end
 end

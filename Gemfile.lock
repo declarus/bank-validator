@@ -4,10 +4,6 @@ GEM
     activemodel (4.2.1)
       activesupport (= 4.2.1)
       builder (~> 3.1)
-    activerecord (4.2.1)
-      activemodel (= 4.2.1)
-      activesupport (= 4.2.1)
-      arel (~> 6.0)
     activesupport (4.2.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -15,7 +11,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.7)
-    arel (6.0.0)
     builder (3.2.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -96,8 +91,6 @@ PLATFORMS
 
 DEPENDENCIES
   activemodel (>= 3.0)
-  activerecord (>= 3.0)
-  activesupport (>= 3.0)
   bundler (~> 1.0)
   jeweler (~> 2.0)
   rdoc (~> 3.12)
