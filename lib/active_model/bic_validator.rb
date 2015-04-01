@@ -9,7 +9,7 @@ class BicValidator < ActiveModel::EachValidator
   private
   
   def record_error(record, attribute, value)
-    record.errors.add(attribute, (:invalid_bic || options[:message]))
+    record.errors.add(attribute, (options[:message] || :invalid_bic))
   end
 
   def regexp

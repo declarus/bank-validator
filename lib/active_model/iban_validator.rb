@@ -9,7 +9,7 @@ class IbanValidator < ActiveModel::EachValidator
   private
   
   def record_error(record, attribute, value)
-    record.errors.add(attribute, (:invalid_iban || options[:message]))
+    record.errors.add(attribute, (options[:message] || :invalid_iban))# || options[:message]))
   end
   
   def regexp
