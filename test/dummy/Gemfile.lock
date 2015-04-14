@@ -1,10 +1,8 @@
 PATH
   remote: ~/Workspace/bank-validator
   specs:
-    bank-validator (0.2.3)
+    bank-validator (0.2.5)
       activemodel (>= 3.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
 
 GEM
   remote: https://rubygems.org/

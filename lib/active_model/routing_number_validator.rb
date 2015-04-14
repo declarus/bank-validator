@@ -17,7 +17,7 @@ class RoutingNumberValidator < ActiveModel::EachValidator
   end
 
   def valid_routing_number?(route_number)
-    d = route_number.chars
+    d = route_number.each_char.to_a
 
     ((3 * (d[0].to_i + d[3].to_i + d[6].to_i)) + (7 * (d[1].to_i + d[4].to_i + d[7].to_i)) + (d[2].to_i + d[5].to_i + d[8].to_i)) % 10 == 0
   end
