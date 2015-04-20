@@ -19,6 +19,10 @@ class RoutingNumberValidator < ActiveModel::EachValidator
   def valid_routing_number?(route_number)
     d = route_number.each_char.to_a
 
-    ((3 * (d[0].to_i + d[3].to_i + d[6].to_i)) + (7 * (d[1].to_i + d[4].to_i + d[7].to_i)) + (d[2].to_i + d[5].to_i + d[8].to_i)) % 10 == 0
+    (weighted_value(1, d, [2, 5, 8]) + weighted_value(3, d, [0, 3, 6]) + weighted_value(7, d, [1, 4, 7])) % 10 == 0
+  end
+
+  def weighted_value(weight, array, indexes)
+    weight * array.values_at(*indexes).collect! {|v| v.to_i}.inject(:+)
   end
 end
