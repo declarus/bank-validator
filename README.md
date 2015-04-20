@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/declarus/bank-validator.svg)](https://travis-ci.org/declarus/bank-validator)
+
 # bank-validator
 
 bank-validator lets you validate different bank account numbers. A validated number means that the number follows the correct format has the correct checksum, which means it *could* be a real bank account. Currently supported formats are:
