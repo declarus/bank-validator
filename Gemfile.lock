@@ -97,3 +97,6 @@ DEPENDENCIES
   rspec
   shoulda (~> 3.5)
   simplecov (~> 0.9)
+
+BUNDLED WITH
+   1.10.6
