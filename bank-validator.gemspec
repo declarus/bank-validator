@@ -6,7 +6,7 @@
 
 Gem::Specification.new do |s|
   s.name = "bank-validator"
-  s.version = "0.2.8"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -18,92 +18,10 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md"
   ]
-  s.files = [
-    ".document",
-    ".travis.yml",
-    "Gemfile",
-    "Gemfile.lock",
-    "LICENSE.txt",
-    "README.md",
-    "Rakefile",
-    "VERSION",
-    "bank-validator.gemspec",
-    "lib/active_model/bic_validator.rb",
-    "lib/active_model/iban_validator.rb",
-    "lib/active_model/routing_number_validator.rb",
-    "lib/activemodel.rb",
-    "lib/bank-validator.rb",
-    "lib/bank_validator/bic.rb",
-    "lib/bank_validator/iban.rb",
-    "lib/bank_validator/routing_number.rb",
-    "test/dummy/.gitignore",
-    "test/dummy/.rspec",
-    "test/dummy/Gemfile",
-    "test/dummy/Gemfile.lock",
-    "test/dummy/README.rdoc",
-    "test/dummy/Rakefile",
-    "test/dummy/app/assets/images/.keep",
-    "test/dummy/app/assets/javascripts/application.js",
-    "test/dummy/app/assets/stylesheets/application.css",
-    "test/dummy/app/controllers/application_controller.rb",
-    "test/dummy/app/controllers/concerns/.keep",
-    "test/dummy/app/helpers/application_helper.rb",
-    "test/dummy/app/mailers/.keep",
-    "test/dummy/app/models/.keep",
-    "test/dummy/app/models/concerns/.keep",
-    "test/dummy/app/models/user.rb",
-    "test/dummy/app/views/layouts/application.html.erb",
-    "test/dummy/bin/bundle",
-    "test/dummy/bin/rails",
-    "test/dummy/bin/rake",
-    "test/dummy/bin/setup",
-    "test/dummy/bin/spring",
-    "test/dummy/config.ru",
-    "test/dummy/config/application.rb",
-    "test/dummy/config/boot.rb",
-    "test/dummy/config/database.yml",
-    "test/dummy/config/environment.rb",
-    "test/dummy/config/environments/development.rb",
-    "test/dummy/config/environments/production.rb",
-    "test/dummy/config/environments/test.rb",
-    "test/dummy/config/initializers/assets.rb",
-    "test/dummy/config/initializers/backtrace_silencers.rb",
-    "test/dummy/config/initializers/cookies_serializer.rb",
-    "test/dummy/config/initializers/filter_parameter_logging.rb",
-    "test/dummy/config/initializers/inflections.rb",
-    "test/dummy/config/initializers/mime_types.rb",
-    "test/dummy/config/initializers/session_store.rb",
-    "test/dummy/config/initializers/wrap_parameters.rb",
-    "test/dummy/config/locales/en.yml",
-    "test/dummy/config/routes.rb",
-    "test/dummy/config/secrets.yml",
-    "test/dummy/db/migrate/20150330083818_create_users.rb",
-    "test/dummy/db/migrate/20150331083155_add_routing_number_to_users.rb",
-    "test/dummy/db/schema.rb",
-    "test/dummy/db/seeds.rb",
-    "test/dummy/lib/assets/.keep",
-    "test/dummy/lib/tasks/.keep",
-    "test/dummy/log/.keep",
-    "test/dummy/public/404.html",
-    "test/dummy/public/422.html",
-    "test/dummy/public/500.html",
-    "test/dummy/public/favicon.ico",
-    "test/dummy/public/robots.txt",
-    "test/dummy/spec/features/gem_testing_spec.rb",
-    "test/dummy/spec/rails_helper.rb",
-    "test/dummy/spec/spec_helper.rb",
-    "test/dummy/vendor/assets/javascripts/.keep",
-    "test/dummy/vendor/assets/stylesheets/.keep",
-    "test/dummy_classes.rb",
-    "test/dummy_classes/dummy_user.rb",
-    "test/dummy_classes/dummy_user2.rb",
-    "test/helper.rb",
-    "test/test_bank-validator.rb"
-  ]
   s.homepage = "http://github.com/declarus/bank-validator"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.4.5"
-  s.summary = "Bank account number validator gem"
+  s.summary = "Bank account number validator gem. Currently covers BIC, IBAN, ABA Routing Number"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
