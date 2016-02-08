@@ -6,12 +6,12 @@
 
 Gem::Specification.new do |s|
   s.name = "bank-validator"
-  s.version = "0.3.1"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Adam Bahlke"]
-  s.date = "2016-01-28"
+  s.date = "2016-02-08"
   s.description = "Validates IBAN and BIC account numbers. Still a work in progress"
   s.email = "adam.bahlke@hitfoxgroup.com"
   s.extra_rdoc_files = [
