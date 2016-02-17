@@ -55,7 +55,9 @@ RSpec.describe 'testing the gem', type: :feature do
     end
 
     it 'saves the bic' do
-      user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: 'DEUTDEFF500')
+      user = User.create(name: 'Adam', iban: 'BE62510007547061', bic: 'DEUTDEFF500', routing_number: '226073523')
+      user.save
+      expect(user.valid?).to be(true)
       expect(user.bic).to eq('DEUTDEFF500')
     end
   end
