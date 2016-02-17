@@ -44,6 +44,9 @@ RSpec.describe 'testing the gem', type: :feature do
 
       @user.bic = 'D3UTDEBR'
       expect(@user.save).to be(false)
+
+      @user.bic = 'COBADEFXXX'
+      expect(@user.save).to be(false)
     end
 
     it 'validates a different bic types' do

@@ -7,7 +7,7 @@ module BankValidator
     end
 
     def valid?
-      BankValidator::Bic.valid_format?(value)
+      BankValidator::Bic.valid_format?(value) && (value.length == 8 || value.length == 11)
     end
 
     def self.valid_format?(bic)
